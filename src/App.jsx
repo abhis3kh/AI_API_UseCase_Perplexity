@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import './css/InputBox.css';
+import './App.css';
 
 function App() {
   const [inputText, setInputText] = useState('');
