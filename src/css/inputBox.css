@@ -1,12 +1,12 @@
 /* InputBox.css */
 :root {
-  --primary-color: #2563eb;      /* Modern blue */
+  --primary-color: #2563eb; /* Modern blue */
   --primary-hover: #1d4ed8;
-  --text-color: #1f2937;         /* Dark gray */
-  --background-color: #f8fafc;   /* Light slate */
+  --text-color: #1f2937; /* Dark gray */
+  --background-color: #f8fafc; /* Light slate */
   --border-color: #e2e8f0;
   --radius: 8px;
-  --shadow: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .queryInputDiv {
@@ -74,9 +74,29 @@
 
 /* Loading spinner */
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .loading-spinner {
   display: inline-block;
-  widt
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .queryInputDiv {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .inputElement {
+    font-size: 0.9rem;
+  }
+}
